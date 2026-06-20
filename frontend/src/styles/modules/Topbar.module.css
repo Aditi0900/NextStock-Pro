@@ -14,6 +14,29 @@
   transition: left 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+.leftSection {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.menuBtn {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  color: var(--text-muted);
+  transition: var(--transition);
+  flex-shrink: 0;
+}
+
+.menuBtn:hover {
+  background: var(--bg-surface-hover);
+  color: var(--text-primary);
+}
+
 .title {
   font-size: 20px;
   font-weight: 600;
@@ -76,6 +99,14 @@
 @media (max-width: 768px) {
   .topbar {
     left: 0 !important;
-    padding: 0 16px;
+    padding: 0 12px;
+  }
+
+  .menuBtn {
+    display: flex;
+  }
+
+  .title {
+    font-size: 16px;
   }
 }

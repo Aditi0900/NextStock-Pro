@@ -7,5 +7,16 @@
 .actions {
   display: flex;
   justify-content: flex-end;
+  gap: 12px;
   padding-top: 8px;
+}
+
+@media (max-width: 480px) {
+  .actions {
+    flex-direction: column;
+  }
+
+  .actions > * {
+    width: 100%;
+  }
 }

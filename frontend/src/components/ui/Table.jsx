@@ -19,7 +19,7 @@ export default function Table({ columns, data, onRowClick, loading = false, skel
             {Array.from({ length: skeletonRows }).map((_, i) => (
               <tr key={i}>
                 {columns.map((col) => (
-                  <td key={col.key}>
+                  <td key={col.key} data-label={col.label}>
                     <div className="skeleton" style={{ height: 16, width: '80%' }} />
                   </td>
                 ))}
@@ -64,7 +64,7 @@ export default function Table({ columns, data, onRowClick, loading = false, skel
               onClick={() => onRowClick?.(row)}
             >
               {columns.map((col) => (
-                <td key={col.key}>
+                <td key={col.key} data-label={col.label}>
                   {col.render ? col.render(row) : row[col.key]}
                 </td>
               ))}

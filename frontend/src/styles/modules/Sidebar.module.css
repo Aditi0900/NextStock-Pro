@@ -113,6 +113,14 @@
   text-align: center;
 }
 
+.standalone {
+  position: relative;
+  width: 100% !important;
+  height: auto;
+  border-right: none;
+  backdrop-filter: none;
+}
+
 .version {
   font-size: 12px;
   color: var(--text-muted);
@@ -133,7 +141,7 @@
 }
 
 @media (max-width: 768px) {
-  .sidebar {
+  .sidebar:not(.standalone) {
     display: none;
   }
 }

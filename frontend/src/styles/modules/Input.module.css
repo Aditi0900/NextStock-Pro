@@ -68,3 +68,10 @@
   color: var(--accent-red);
   margin-top: 2px;
 }
+
+@media (max-width: 480px) {
+  .input {
+    padding: 14px;
+    font-size: 16px;
+  }
+}

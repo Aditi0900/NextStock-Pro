@@ -18,12 +18,12 @@ const navItems = [
   { path: '/orders', label: 'Orders', icon: ShoppingCart },
 ];
 
-export default function Sidebar({ collapsed, onToggle }) {
+export default function Sidebar({ collapsed, onToggle, mobileOpen, onMobileClose, standalone }) {
   const location = useLocation();
 
   return (
     <motion.aside
-      className={`${styles.sidebar} ${collapsed ? styles.collapsed : ''}`}
+      className={`${styles.sidebar} ${collapsed ? styles.collapsed : ''} ${standalone ? styles.standalone : ''}`}
       layout
       transition={{ duration: 0.3, ease: [0.4, 0, 0.2, 1] }}
     >

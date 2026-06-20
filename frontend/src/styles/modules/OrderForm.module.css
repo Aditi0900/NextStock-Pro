@@ -339,3 +339,44 @@
   font-size: 11px;
   color: var(--accent-red);
 }
+
+@media (max-width: 480px) {
+  .itemFields {
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .productSelect {
+    flex: 1 1 100%;
+  }
+
+  .qtyInput {
+    width: 72px;
+  }
+
+  .subtotal {
+    width: auto;
+    flex: 1;
+    justify-content: flex-start;
+    padding: 10px 0 0;
+    font-size: 13px;
+  }
+
+  .removeBtn {
+    width: 44px;
+    height: 44px;
+  }
+
+  .stepActions {
+    flex-direction: column;
+  }
+
+  .stepActions > * {
+    width: 100%;
+  }
+
+  .addItemBtn {
+    align-self: stretch;
+    justify-content: center;
+  }
+}
