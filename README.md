@@ -137,15 +137,23 @@ git push -u origin main
 
 ### 2. Backend — Render
 
-1. Create a **Render Web Service**
+**Option A — Buildpack (recommended):**
+1. Create a **Render Web Service** (not Docker)
 2. Connect your GitHub repo, set **Root Directory** to `backend`
 3. **Build Command:** `pip install -r requirements.txt`
-4. **Start Command:** `uvicorn app.main:app --host 0.0.0.0 --port 8000`
+4. **Start Command:** `uvicorn app.main:app --host 0.0.0.0 --port $PORT`
 5. Add a **Render PostgreSQL** database
 6. Set environment variables:
    - `DATABASE_URL` — Internal Render PostgreSQL URL
    - `ALLOWED_ORIGINS` — Your Vercel frontend URL
    - `DEBUG` — `false`
+
+> Python version is pinned to 3.12 via `backend/runtime.txt`. Render defaults to 3.14 which is incompatible with SQLAlchemy 2.0.30.
+
+**Option B — Docker (if you prefer):**
+1. Create a **Render Web Service** with **Docker** runtime type
+2. Set **Root Directory** to `backend`
+3. The included `Dockerfile` (Python 3.11-slim) will be used automatically
 
 ### 3. Frontend — Vercel
 
