@@ -128,14 +128,14 @@
 }
 
 @media (max-width: 1024px) {
-  .sidebar {
+  .sidebar:not(.standalone) {
     width: var(--sidebar-collapsed);
   }
 
-  .logoText,
-  .navLabel,
-  .version,
-  .toggleBtn {
+  .sidebar:not(.standalone) .logoText,
+  .sidebar:not(.standalone) .navLabel,
+  .sidebar:not(.standalone) .version,
+  .sidebar:not(.standalone) .toggleBtn {
     display: none !important;
   }
 }
