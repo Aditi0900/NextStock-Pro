@@ -1,0 +1,25 @@
+.layout {
+  min-height: 100vh;
+}
+
+.main {
+  margin-left: var(--sidebar-width);
+  margin-top: var(--topbar-height);
+  padding: 32px;
+  min-height: calc(100vh - var(--topbar-height));
+  position: relative;
+  z-index: 1;
+}
+
+@media (max-width: 1024px) {
+  .main {
+    margin-left: var(--sidebar-collapsed);
+  }
+}
+
+@media (max-width: 768px) {
+  .main {
+    margin-left: 0;
+    padding: 16px;
+  }
+}
