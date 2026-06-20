@@ -148,8 +148,6 @@ git push -u origin main
    - `ALLOWED_ORIGINS` — Your Vercel frontend URL
    - `DEBUG` — `false`
 
-> Python version is pinned to 3.12 via `backend/runtime.txt`. Render defaults to 3.14 which is incompatible with SQLAlchemy 2.0.30.
-
 **Option B — Docker (if you prefer):**
 1. Create a **Render Web Service** with **Docker** runtime type
 2. Set **Root Directory** to `backend`
